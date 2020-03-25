@@ -14,7 +14,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
 	session({
-		secret: "ghjgsadfsdfhdshgkhdsbtyjty",
+		secret: process.env.SESSION_SECRET,
 		resave: false,
 		saveUninitialized: false
 	})
